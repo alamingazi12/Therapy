@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/call_client"
+        android:title="Call Client"
+        app:showAsAction="never"/>
+    <item android:id="@+id/video_call_client"
+        android:title="Video call client"
+        app:showAsAction="never"/>
+    <item android:id="@+id/m_client"
+        android:title="Message Client"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/del_client"
+        android:title="Delete Client"
+        app:showAsAction="never"/>
+    <item android:id="@+id/view_client"
+        android:title="View Client Details"
+        app:showAsAction="never"/>
+</menu>

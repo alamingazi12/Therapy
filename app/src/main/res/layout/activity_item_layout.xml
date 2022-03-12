@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_item"
+    android:background="@drawable/layout_item_style"
+    android:orientation="vertical"
+    android:layout_margin="7dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       >
+
+        <ImageView
+            android:id="@+id/activity_image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/activity_title"
+            app:srcCompat="@drawable/ic__call_24" />
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13dp"
+            android:layout_toEndOf="@+id/activity_image"
+            android:textFontWeight="600"
+            android:text="Chat"
+
+            android:textColor="@color/black"
+            android:textSize="19sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activity_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/activity_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="19 Jan 2019 | 19:30"
+            android:textSize="12sp"
+            android:textFontWeight="450"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/sub_titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_title"
+        android:layout_alignStart="@+id/activity_title"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="14dp"
+
+        android:text="Called to cancel"
+        android:textSize="18sp"
+        android:textFontWeight="500"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_image"
+        app:layout_constraintTop_toBottomOf="@+id/activity_title" />
+</LinearLayout>

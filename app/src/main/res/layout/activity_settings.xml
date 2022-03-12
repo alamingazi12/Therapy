@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_btn" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/helveticalight"
+        android:text="Settings"
+        android:textStyle="bold"
+
+        android:textAllCaps="true"
+        android:textColor="@color/dark"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/helveticalight"
+        android:text="Payment setup"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/go_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/helveticalight"
+        android:text="Privacy Policy"
+        android:textAllCaps="true"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        app:layout_constraintStart_toStartOf="@+id/textView42"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/helveticalight"
+        android:text="Subscription Terms"
+        android:textAllCaps="true"
+        android:textFontWeight="600"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/go_settings"
+        app:layout_constraintTop_toBottomOf="@+id/go_settings" />
+
+    <TextView
+        android:id="@+id/go_account_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/helveticalight"
+        android:textStyle="bold"
+        android:text="Account info "
+        android:textAllCaps="true"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Chat settings"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+
+        android:fontFamily="@font/helveticalight"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        app:layout_constraintStart_toStartOf="@+id/go_account_info"
+        app:layout_constraintTop_toBottomOf="@+id/go_account_info" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:textAllCaps="true"
+        android:text="Contact Us"
+        android:textStyle="bold"
+        android:fontFamily="@font/helveticalight"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        app:layout_constraintStart_toStartOf="@+id/textView40"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Terms &amp; Conditions"
+        android:textAllCaps="true"
+
+        android:textStyle="bold"
+        android:fontFamily="@font/helveticalight"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/client_option_text"
+        app:layout_constraintStart_toStartOf="@+id/textView41"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+</androidx.constraintlayout.widget.ConstraintLayout>

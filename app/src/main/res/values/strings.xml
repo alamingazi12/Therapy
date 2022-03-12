@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="heading_text">Let"'"s get started!</string>
+    <string name="app_name">Therapy Space</string>
+    <string name="wl_small_text">I AM A</string>
+    <string name="client_text">Client</string>
+    <string name="practitionar">Practionar</string>
+    <string name="welcome_text">Welcome to  therapy.space </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="big_custom_text">Custom title
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dignissim leo. Quisque venenatis eros justo, non imperdiet turpis varius nec. Morbi nec ex in risus varius hendrerit et eu mi.</string>
+</resources>

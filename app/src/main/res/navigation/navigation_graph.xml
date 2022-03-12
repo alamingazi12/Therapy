@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/schedule_fragment"
+        android:name="com.example.therapyspace.fragments.ScheduleFragment"
+        android:label="second_fragments"
+        tools:layout="@layout/fragment_schedule">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/session_fragment"
+        android:name="com.example.therapyspace.fragments.SessionsFragment"
+        android:label="second_fragments"
+        tools:layout="@layout/fragment_sessions">
+        <action android:id="@+id/session_to_home"
+            app:destination="@id/home_fragment"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/client_fragment"
+        android:name="com.example.therapyspace.ClientsFragment"
+        android:label="thired_fragments"
+        tools:layout="@layout/fragment_clients" />
+
+    <fragment
+        android:id="@+id/clients_fragment"
+        android:name="com.example.therapyspace.fragments.ClientFragment"
+        android:label="thired_fragments"
+        tools:layout="@layout/fragment_client" >
+        <action android:id="@+id/client_to_clients_fragment"
+            app:destination="@+id/client_fragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.therapyspace.fragments.HomeFragment"
+        android:label="thired_fragments"
+        tools:layout="@layout/fragment_clients" >
+        <action android:id="@+id/home_to_schedule"
+            app:destination="@+id/schedule_fragment"/>
+        <action android:id="@+id/home_to_clients"
+            app:destination="@+id/client_fragment"/>
+        <action
+            android:id="@+id/action_home_fragment_to_client_fragment2"
+            app:destination="@id/client_fragment" />
+        <action
+            android:id="@+id/home_to_session"
+            app:destination="@id/session_fragment" />
+    </fragment>
+
+</navigation>
