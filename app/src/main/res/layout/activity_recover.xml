@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_back_btn" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_confirm_email"
         style="@style/sign_btn_style"
         android:layout_width="0dp"
         android:layout_height="@dimen/btn_height"
@@ -91,7 +91,7 @@ android:textSize="18sp"
         android:textColorHint="@color/sign_btn_bg"
         android:inputType="textEmailAddress"
         android:hint="Input Email address"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_confirm_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />

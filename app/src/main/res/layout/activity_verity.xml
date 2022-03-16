@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/ic_back_btn" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_confirm_email"
         style="@style/sign_btn_style"
         android:layout_width="0dp"
         android:layout_height="@dimen/btn_height"

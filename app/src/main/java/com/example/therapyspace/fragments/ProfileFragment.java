@@ -1,22 +1,22 @@
 package com.example.therapyspace.fragments;
 
 import android.os.Bundle;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 import com.example.therapyspace.R;
+import org.jetbrains.annotations.NotNull;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class ProfileFragment extends Fragment {
-
+    ImageView client_profile_menu;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -62,5 +62,42 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initAll(view);
+    }
+
+    private void initAll(View view) {
+        client_profile_menu=view.findViewById(R.id.client_profile_menu);
+        client_profile_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popup=new PopupMenu(getContext(),client_profile_menu);
+                //inflating menu from xml resource
+                popup.inflate(R.menu.client_profile_menu);
+               // Menu menu=   popup.getMenu();
+
+                //adding click listener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(android.view.MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.general_setting:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                // Essentials.logout(MainActivity.this);
+                                break;
+                            case R.id.client_schedule:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                        return false;
+                    }
+                });
+                popup.show();
+            }
+        });
     }
 }

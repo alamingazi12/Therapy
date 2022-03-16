@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TherapySpace">
         <activity android:name=".WeekScheduleActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".NewSessionActivity">
 
@@ -35,7 +32,8 @@
         <activity android:name=".AccountInfo" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".PractionerHomeActivity" />
+        <activity android:name=".PractionerHomeActivity" >
+        </activity>
         <activity android:name=".TakingActivity" />
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".GreetingActivity" />
@@ -45,9 +43,20 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".VerityActivity" />
         <activity android:name=".PasswordActivity" />
-        <activity android:name=".EmailActivity" />
+        <activity android:name=".EmailActivity" >
+
+        </activity>
         <activity android:name=".SignActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/call_client"
-        android:title="Call Client"
+        android:title="CALL CLIENT"
         app:showAsAction="never"/>
     <item android:id="@+id/video_call_client"
-        android:title="Video call client"
+        android:title="VIDEO CALL CLIENT"
         app:showAsAction="never"/>
     <item android:id="@+id/m_client"
-        android:title="Message Client"
+        android:title="MESSAGE CLIENT"
         app:showAsAction="never"/>
 
     <item android:id="@+id/del_client"
-        android:title="Delete Client"
+        android:title="DELETE CLIENT"
         app:showAsAction="never"/>
     <item android:id="@+id/view_client"
-        android:title="View Client Details"
+        android:title="VIEW CLIENT DETAILS"
         app:showAsAction="never"/>
 </menu>

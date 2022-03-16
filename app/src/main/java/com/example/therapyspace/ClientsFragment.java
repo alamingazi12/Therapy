@@ -12,6 +12,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.example.therapyspace.fragments.ActivitiesFragment;
@@ -28,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
  * create an instance of this fragment.
  */
 public class ClientsFragment extends Fragment {
-
+    ImageView client_menu_btn;
     ViewPager view_donation_history;
     TabLayout tabLayout_donation;
 
@@ -83,11 +85,55 @@ public class ClientsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        initAll(view);
         view_donation_history=view.findViewById(R.id.client_viewpager);
         SectionsPagerAdapter sectionsPagerAdapter=new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
         view_donation_history.setAdapter(sectionsPagerAdapter);
         tabLayout_donation=view.findViewById(R.id.client_tab);
         tabLayout_donation.setupWithViewPager(view_donation_history);
+    }
+
+    private void initAll(View view) {
+        client_menu_btn=view.findViewById(R.id.client_menu_btn);
+        client_menu_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                PopupMenu popup=new PopupMenu(getContext(),client_menu_btn);
+                //inflating menu from xml resource
+                popup.inflate(R.menu.client_option_menu);
+                //Menu menu=   popup.getMenu();
+
+                //adding click listener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(android.view.MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.call_client:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                // Essentials.logout(MainActivity.this);
+                                break;
+                            case R.id.video_call_client:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                break;
+                            case R.id.m_client:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                // Essentials.logout(MainActivity.this);
+                                break;
+                            case R.id.del_client:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case R.id.view_client:
+                                Toast.makeText(getContext(),"menu item Clicked",Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                        return false;
+                    }
+                });
+                popup.show();
+            }
+        });
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
