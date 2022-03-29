@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class ClientsFragment extends Fragment {
     ImageView client_menu_btn;
-    ViewPager view_donation_history;
+    ViewPager view_pager_donation_history;
     TabLayout tabLayout_donation;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -86,11 +86,11 @@ public class ClientsFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initAll(view);
-        view_donation_history=view.findViewById(R.id.client_viewpager);
+        view_pager_donation_history=view.findViewById(R.id.client_viewpager);
         SectionsPagerAdapter sectionsPagerAdapter=new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
-        view_donation_history.setAdapter(sectionsPagerAdapter);
+        view_pager_donation_history.setAdapter(sectionsPagerAdapter);
         tabLayout_donation=view.findViewById(R.id.client_tab);
-        tabLayout_donation.setupWithViewPager(view_donation_history);
+        tabLayout_donation.setupWithViewPager(view_pager_donation_history);
     }
 
     private void initAll(View view) {
@@ -157,8 +157,8 @@ public class ClientsFragment extends Fragment {
                     fragment = new DocFragment();
                     break;
                 case 3:
-                    fragment = new ActivitiesFragment();
-                    break;
+                  fragment = new ActivitiesFragment();
+                break;
             }
             return fragment;
         }
@@ -167,6 +167,7 @@ public class ClientsFragment extends Fragment {
             // Show 4 total pages.
             return 4;
         }
+
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
@@ -177,7 +178,6 @@ public class ClientsFragment extends Fragment {
                     return "NOTE";
                 case 2:
                     return "DOCS";
-
                 case 3:
                     return "ACTIVITY";
             }

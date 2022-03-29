@@ -9,4 +9,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="big_custom_text">Custom title
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dignissim leo. Quisque venenatis eros justo, non imperdiet turpis varius nec. Morbi nec ex in risus varius hendrerit et eu mi.</string>
+    <string name="app_label">Search</string>
+    <string name="search_hint">Search here</string>
 </resources>

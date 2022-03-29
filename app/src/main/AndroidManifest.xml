@@ -9,13 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TherapySpace">
-        <activity android:name=".WeekScheduleActivity">
-
-        </activity>
-        <activity android:name=".NewSessionActivity">
-
-        </activity>
-        <activity android:name=".InVoiceActivity"></activity>
+        <activity android:name=".client.ClientHomeActivity"></activity>
+        <activity android:name=".WeekScheduleActivity"></activity>
+        <activity android:name=".NewSessionActivity"></activity>
+        <activity android:name=".InVoiceActivity" />
         <activity android:name=".EditActivity" />
         <activity android:name=".SessionReqActivity" />
         <activity android:name=".ClientRoomActivity" />
@@ -32,7 +29,11 @@
         <activity android:name=".AccountInfo" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".PractionerHomeActivity" >
+        <activity android:name=".PractionerHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".TakingActivity" />
         <activity android:name=".ScheduleActivity" />
@@ -43,15 +44,14 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".VerityActivity" />
         <activity android:name=".PasswordActivity" />
-        <activity android:name=".EmailActivity" >
-
-        </activity>
+        <activity android:name=".EmailActivity"></activity>
         <activity android:name=".SignActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
         </activity>
 
         <meta-data
